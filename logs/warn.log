@@ -32,3 +32,4 @@
 {"level":"error","message":"product is not defined"}
 {"level":"error","message":"No se pudo crear el producto"}
 {"level":"error","message":"No se pudo crear el producto"}
+{"level":"error","message":"Por favor ingresar todos los campos del nuevo producto"}
