@@ -1,0 +1,34 @@
+{"level":"warn","message":"Error en el servidor Error: listen EADDRINUSE: address already in use :::8080"}
+{"level":"warn","message":"Error en el servidor Error: listen EADDRINUSE: address already in use :::8080"}
+{"level":"warn","message":"Error en el servidor Error: listen EADDRINUSE: address already in use :::8080"}
+{"level":"warn","message":"Error en el servidor Error: listen EADDRINUSE: address already in use :::8080"}
+{"level":"warn","message":"Error en el servidor Error: listen EADDRINUSE: address already in use :::8080"}
+{"level":"warn","message":"Error en el servidor Error: listen EADDRINUSE: address already in use :::8080"}
+{"level":"warn","message":"Error en el servidor Error: listen EADDRINUSE: address already in use :::8080"}
+{"level":"warn","message":"No existe la pagina solicitada"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'status')"}
+{"level":"error","message":"hubo un error al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"hubo un error previo al crear el usuario req is not defined"}
+{"level":"error","message":"hubo un error previo al crear el usuario res is not defined"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"productManager.getAll is not a function"}
+{"level":"error","message":"productManager.getAll is not a function"}
+{"level":"error","message":"product is not defined"}
+{"level":"error","message":"product is not defined"}
+{"level":"error","message":"product is not defined"}
+{"level":"error","message":"No se pudo crear el producto"}
+{"level":"error","message":"No se pudo crear el producto"}
