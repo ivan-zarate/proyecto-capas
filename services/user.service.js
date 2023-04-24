@@ -1,14 +1,14 @@
-const {userManager} = require("../model/index");
+const {userDao} = require("../daos/factory");
 
-
-class userService{
+const {UserDTO} = require("../daos/dtos/user.dto");
+class UserService{
     static async registerUsers(user){
-        return await userManager.signup(user);
+        return await userDao.signup(user);
     };
 
     static async loginUser(user){
-        return await userManager.login(user);
+        return await userDao.login(user);
     }
 };
 
-module.exports = {userService};
+module.exports = {UserService};

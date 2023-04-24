@@ -1,20 +1,20 @@
-const {productManager} = require("../model/index");
+const {productDao} = require("../daos/factory");
 
 
-class productService{
+class ProductService{
     static async getProducts(){
-        return await productManager.getAll();
+        return await productDao.getAll();
     };
     static async createProduct(product){
-        return await productManager.create(product);
+        return await productDao.create(product);
     };
     static async modifyProduct(id, product){
-        return await productManager.modify(id, product);
+        return await productDao.modify(id, product);
     };
      static async deleteProduct(id){
-        return await productManager.delete(id);
+        return await productDao.delete(id);
     };
 
 };
 
-module.exports = {productService};
+module.exports = {ProductService};

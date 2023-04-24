@@ -25,3 +25,14 @@
 {"level":"error","message":"No se pudo crear el producto"}
 {"level":"error","message":"No se pudo crear el producto"}
 {"level":"error","message":"Por favor ingresar todos los campos del nuevo producto"}
+{"level":"error","message":"messages validation failed: author.id: Path `author.id` is required."}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'json')"}
+{"level":"error","message":"hubo un error previo al crear el usuario users is not defined"}
+{"level":"error","message":"hubo un error previo al crear el usuario users is not defined"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot access 'users' before initialization"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"UserService.registerUsers is not a function"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}

@@ -5,7 +5,6 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 const { options } = require("./config/options.js");
 const newArgs = require("./config/arg.js");
-const { connectDB } = require("./config/dbConnection.js");
 const cookieParser = require("cookie-parser")
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
@@ -20,7 +19,7 @@ const port = newArgs.port;
 //Acceso a rutas
 const productsInMongo = require("./routes/product.routes.js");
 // const cartsInMongo = require("./src/routes/cartsRoutes/cartsMongo.js");
-// const chatInMongo = require("./src/routes/messagesRoutes/messagesMongo.js")
+const chatInMongo = require("./routes/message.routes.js");
 const sessionsMongo = require("./routes/user.routes.js");
 // const processRoutes = require("./src/routes/processRoutes/processRoutes.js");
 // const sellsRoutes =require("./src/routes/sellsRoutes/sellRoutes.js");
@@ -74,8 +73,8 @@ else {
     //Uso de app en las distintas rutas
     app.use('/api', productsInMongo);
     //   app.use('/api', cartsInMongo);
-    //   app.use('/api', chatInMongo);
-      app.use('/api', sessionsMongo);
+    app.use('/api', chatInMongo);
+    app.use('/api', sessionsMongo);
     //   app.use('/api', sellsRoutes);
     //   app.use('/api', processRoutes);
 
@@ -92,10 +91,6 @@ else {
             io.sockets.emit('mensajes', mensajes);
         });
     });
-
-
-    connectDB();
-    //connectDB().then(() => logger.info('Connected to Mongo')).catch(() => logger.warn('An error occurred trying to connect to mongo'));
 
     const srv = server.listen(port, () => {
         logger.info(`Escuchando app en el puerto ${srv.address().port} sobre el proceso ${process.pid} en modo ${newArgs.mode}`);

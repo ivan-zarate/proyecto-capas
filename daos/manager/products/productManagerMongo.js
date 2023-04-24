@@ -1,4 +1,4 @@
-class productManagerMongo {
+class ProductManagerMongo {
     constructor(model) {
         this.model = model;
     };
@@ -38,4 +38,4 @@ class productManagerMongo {
 }
   
 
-module.exports = {productManagerMongo}
+module.exports = {ProductManagerMongo}

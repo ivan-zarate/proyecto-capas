@@ -1,6 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcryptjs");
+const { usersMongo } = require("../../dbModels/user.model");
 
 let user = [];
 
@@ -9,7 +10,8 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-    usersMongoDAO.findById(id, (err, userDB) => {
+    usersMongo.findById(id, (err, userDB) => {
+        console.log("primer error?");
         return done(err, userDB)
     })
 })
@@ -42,24 +44,25 @@ passport.use("signUpStrategy", new LocalStrategy(
 
 ));
 
-class userManagerMongo {
+class UserManagerMongo {
     constructor(model) {
         this.model = model;
     };
-    async signup(users, res, req) {
+    async signup(users, req, res){
         try {
+            const user=this.model(users);
             console.log("userSignup", users);
-            passport.authenticate("signUpStrategy", (error, users, info) => {
+            passport.authenticate("signUpStrategy", (error, user1=user, info) => {
 
-                console.log("aca?", error, users, info);
+                console.log("aca?", error, user1, info);
+                return("era esto?")
+                // if (error) return res.json({ message: info.message });
 
-                if (error) return res.json({ message: info.message });
+                // if (!user) return res.json({ message: info.message });
 
-                if (!user) return res.json({ message: info.message });
+                // res.json({ users, message: info.message });
 
-                res.json({ users, message: info.message });
-
-            })(users, res, req)
+            })(req, res)
         } catch (error) {
             throw new Error(`hubo un error previo al crear el usuario ${error.message}`)
         }
@@ -99,4 +102,4 @@ class userManagerMongo {
     // }
 }
 
-module.exports = {userManagerMongo}
+module.exports = {UserManagerMongo}

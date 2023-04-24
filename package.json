@@ -2,7 +2,7 @@
   "name": "proyecto-capas",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",  
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-forever-fork": "forever start app.js -p 8080",
@@ -28,6 +28,7 @@
     "nodemon": "^2.0.22",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "singleton": "^1.0.0",
     "socket.io": "^4.6.1",
     "twilio": "^4.10.0",
     "winston": "^3.8.2"
