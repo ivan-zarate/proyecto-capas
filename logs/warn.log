@@ -44,3 +44,19 @@
 {"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
 {"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
 {"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario Cannot read properties of undefined (reading 'logIn')"}
+{"level":"error","message":"hubo un error previo al crear el usuario next is not a function"}
+{"level":"error","message":"hubo un error previo al crear el usuario next is not a function"}
+{"level":"error","message":"hubo un error previo al crear el usuario prueba is not defined"}
+{"level":"error","message":"hubo un error previo al crear el usuario verifyUser.json is not a function"}
+{"level":"error","message":"hubo un error previo al crear el usuario verifyUser.json is not a function"}
+{"level":"error","message":"hubo un error previo al crear el usuario createdUser.json is not a function"}
+{"level":"error","message":"hubo un error previo al crear el usuario Converting circular structure to JSON\n    --> starting at object with constructor 'MongoClient'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'client' closes the circle"}
+{"level":"error","message":"hubo un error previo al crear el usuario Unexpected token u in JSON at position 0"}
+{"level":"error","message":"hubo un error previo al crear el usuario E11000 duplicate key error collection: ecommerce.users index: username_1 dup key: { username: \"zenitsu.kime@gmail.com\" }"}
+{"level":"error","message":"hubo un error al crear el usuario E11000 duplicate key error collection: ecommerce.users index: username_1 dup key: { username: \"zenitsu.kime@gmail.com\" }"}
+{"level":"error","message":"hubo un error al crear el usuario E11000 duplicate key error collection: ecommerce.users index: username_1 dup key: { username: \"zenitsu.kime@gmail.com\" }"}
+{"level":"warn","message":"No existe la pagina solicitada"}

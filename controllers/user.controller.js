@@ -20,6 +20,15 @@ const loginUserController = async(req,res)=>{
         logger.error(error.message)
         res.json({status:"error",message:error.message});
     }
+};
+const getUsersController  = async(req,res)=>{
+    try {
+        const users = await UserService.getUsers();
+        res.json({status:"success",data:users});
+    } catch (error) {
+        logger.error(error.message)
+        res.json({status:"error",message:error.message});
+    }
 }
 
-module.exports = {registerUsersController,loginUserController}
+module.exports = {registerUsersController,loginUserController, getUsersController}

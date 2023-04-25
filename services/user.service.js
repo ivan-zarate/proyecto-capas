@@ -9,6 +9,11 @@ class UserService{
     static async loginUser(user){
         return await userDao.login(user);
     }
+    static async getUsers(){
+        const users = await userDao.getAll();
+        const newUsersDto = users.map(user=>new UserDTO(user));
+        return newUsersDto;
+    }
 };
 
 module.exports = {UserService};
