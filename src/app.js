@@ -18,11 +18,11 @@ const port = newArgs.port;
 
 //Acceso a rutas
 const productsInMongo = require("./routes/product.routes.js");
-// const cartsInMongo = require("./src/routes/cartsRoutes/cartsMongo.js");
+const cartsInMongo = require("./routes/cart.routes.js");
 const chatInMongo = require("./routes/message.routes.js");
 const sessionsMongo = require("./routes/user.routes.js");
 // const processRoutes = require("./src/routes/processRoutes/processRoutes.js");
-// const sellsRoutes =require("./src/routes/sellsRoutes/sellRoutes.js");
+const sellsRoutes =require("./routes/sell.routes.js");
 
 if (newArgs.mode === "CLUSTER" && cluster.isPrimary) {
     for (let i = 0; i < numCors; i++) {
@@ -72,10 +72,10 @@ else {
 
     //Uso de app en las distintas rutas
     app.use('/api', productsInMongo);
-    //   app.use('/api', cartsInMongo);
+    app.use('/api', cartsInMongo);
     app.use('/api', chatInMongo);
     app.use('/api', sessionsMongo);
-    //   app.use('/api', sellsRoutes);
+    app.use('/api', sellsRoutes);
     //   app.use('/api', processRoutes);
 
     app.use(express.static("public"));
@@ -103,4 +103,5 @@ else {
         logger.warn("No existe la pagina solicitada")
         return res.status(400).redirect(link);
     });
-} 
+}
+module.exports={app} 

@@ -10,6 +10,14 @@ class ProductManagerMongo {
             throw new Error("No se pudo obtener los productos");
         }
     };
+    async getByName(name){
+        try {
+            const product = await this.model.findOne(name);
+            return product;
+        } catch (error) {
+            throw new Error("No se pudo obtener los productos");
+        }
+    };
     async create(product){
         try {
             const newProduct = new this.model(product);

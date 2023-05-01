@@ -5,6 +5,9 @@ class ProductService{
     static async getProducts(){
         return await productDao.getAll();
     };
+    static async getProductByName(name){
+        return await productDao.getByName(name);
+    };
     static async createProduct(product){
         return await productDao.create(product);
     };
