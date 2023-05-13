@@ -5,7 +5,7 @@ let user = {};
 const getProducts = () => {
     fetch(baseUrl + '/api/products').then(res => {
         res.json().then(json => {
-            productos = json;
+            productos = json.data;
             printProducts();
             getUser();
         })
@@ -32,8 +32,8 @@ const mapProducts = (product) => {
 
 }
 
-const deleteProduct = (productCode) => {
-    fetch(baseUrl + '/api/products/' + productCode, { method: "DELETE" }).then(res => {
+const deleteProduct = (productId) => {
+    fetch(baseUrl + '/api/products/' + productId, { method: "DELETE" }).then(res => {
         getProducts();
     })
 }
@@ -58,8 +58,8 @@ const addProduct = () => {
     })
 }
 
-const populateData = (productCode) => {
-    let product = productos.filter(product => product.code == productCode);
+const populateData = (productId) => {
+    let product = productos.filter(product => product._id == productId);
     product = product[0];
     document.getElementById("name").value = product.name;
     document.getElementById("description").value = product.description;
@@ -96,7 +96,7 @@ const actualizeProduct = () => {
 const productsInCart = () => {
     fetch(baseUrl + '/api/cart-products').then(res => {
         res.json().then(json => {
-            productos = json;
+            productos = json.data;
             printCartProducts();
             getUser();
             totalAPagar();
@@ -183,7 +183,7 @@ finalizarCompra=()=>{
 const productsTo = () => {
     fetch(baseUrl + '/api/products').then(res => {
         res.json().then(json => {
-            productos = json;
+            productos = json.data;
             printProductsCart()
         })
     })
