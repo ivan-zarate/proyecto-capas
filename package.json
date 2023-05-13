@@ -5,10 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha src/test/test.js --timeout 20000 --exit",
-    "start-forever-fork": "forever start src/app.js -p 8080",
-    "start-forever-cluster": "forever start src/app.js -m CLUSTER -p 8081",
-    "start": "nodemon src/app.js",
-    "start-cluster": "nodemon src/app.js -m CLUSTER"
+    "start-forever-fork": "forever start src/app.js -p 8080"
+    
   },
   "keywords": [],
   "author": "",
