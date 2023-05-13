@@ -96,7 +96,7 @@ else {
         logger.info(`Escuchando app en el puerto ${srv.address().port} sobre el proceso ${process.pid} en modo ${newArgs.mode}`);
     });
 
-    srv.on('error', error => logger.warn(`Error en el servidor ${error}`))
+    srv.on('error', error => logger.warn(`Error e   n el servidor ${error}`))
 
     app.get("/",(req,res)=>{
         const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html';
@@ -106,7 +106,7 @@ else {
 
     app.get("*", async (req, res) => {
         const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html'
-        //logger.warn("No existe la pagina solicitada")
+        logger.warn("No existe la pagina solicitada")
         return res.status(400).redirect(link);
     });
 }
