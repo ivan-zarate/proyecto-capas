@@ -98,6 +98,10 @@ else {
 
     srv.on('error', error => logger.warn(`Error en el servidor ${error}`))
 
+    app.get("/",(req,res)=>{
+        res.sendFile("index.html");
+    });
+
     app.get("*", async (req, res) => {
         const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html'
         logger.warn("No existe la pagina solicitada")
