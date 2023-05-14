@@ -99,15 +99,14 @@ else {
     srv.on('error', error => logger.warn(`Error e   n el servidor ${error}`))
 
     app.get("/",(req,res)=>{
-        // const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html';
-        // res.redirect(link)
-        res.sendFile('public/index.html', { root: __dirname });
+        const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html';
+        res.redirect(link)
     });
 
-    // app.get("*", async (req, res) => {
-    //     const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html'
-    //     logger.warn("No existe la pagina solicitada")
-    //     return res.status(400).redirect(link);
-    // });
+    app.get("*", async (req, res) => {
+        const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html'
+        logger.warn("No existe la pagina solicitada")
+        return res.status(400).redirect(link);
+    });
 }
 module.exports={app} 
