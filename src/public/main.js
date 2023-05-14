@@ -3,7 +3,8 @@ let productos = [];
 let user = {};
 
 const getProducts = () => {
-    fetch(baseUrl + '/api/products').then(res => {
+    fetch('http://127.0.0.1:5500/server-backend/src/public/index.html' + '/api/products').then(res => {
+    //fetch(baseUrl + '/api/products').then(res => {
         res.json().then(json => {
             productos = json.data;
             printProducts();
