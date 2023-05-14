@@ -1,4 +1,5 @@
-let baseUrl = "http://localhost:8080";
+//let baseUrl = "http://localhost:8080";
+let baseUrl='https://proyecto-capas-production.up.railway.app/'
 let productos = [];
 let user = {};
 
@@ -8,7 +9,7 @@ const getProducts = () => {
             productos = json.data;
             printProducts();
             getUser();
-        })
+        })          
     })
 }
 const printProducts = () => {
