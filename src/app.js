@@ -110,7 +110,7 @@ else {
     //     return res.status(400).redirect(link);
     // });
     app.get("/prueba",(res)=>{
-
+        console.log(options.PRUEBA);
         return res.send(`variable ${options.PRUEBA}`)
         
         });
