@@ -1,4 +1,4 @@
-let baseUrl ='proyecto-capas-production.up.railway.app' ;
+let baseUrl ='server-backend/src/public/proyecto-capas-production.up.railway.app' ;
 let productos = [];
 let user = {};
 
