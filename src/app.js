@@ -100,8 +100,9 @@ else {
 
     app.get("/",(req,res)=>{
         const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html';
-        res.redirect(link)
-        //res.sendFile(__dirname + '/public/index.html')
+        //res.redirect(link);
+        const root=JSON.stringify(__dirname + '/public/index.html')
+        res.sendFile(root)
     });
 
     app.get("*", async (req, res) => {
