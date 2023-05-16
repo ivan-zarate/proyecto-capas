@@ -19,3 +19,5 @@
 {"level":"error","message":"E11000 duplicate key error collection: ecommerce.products index: name_1 dup key: { name: \"Mintion | Beagle Camera | 3D Printer Camera | 32GB\" }"}
 {"level":"error","message":"E11000 duplicate key error collection: ecommerce.products index: name_1 dup key: { name: \"Mintion | Beagle Camera | 3D Printer Camera | 32GB\" }"}
 {"level":"error","message":"E11000 duplicate key error collection: ecommerce.products index: name_1 dup key: { name: \"Mintion | Beagle Camera | 3D Printer Camera | 32GB\" }"}
+{"level":"error","message":"No se pudo eliminar el producto"}
+{"level":"error","message":"No se pudo eliminar el producto"}
