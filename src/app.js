@@ -101,7 +101,7 @@ else {
     app.get("/",(req,res)=>{
         const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html';
         //res.redirect(link);
-        const root=JSON.stringify(__dirname + '/public/index.html')
+        const root=JSON.parse(__dirname + '/public/index.html')
         res.sendFile(root)
     });
 
