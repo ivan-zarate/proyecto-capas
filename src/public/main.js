@@ -1,4 +1,4 @@
-let baseUrl = "http://localhost:8080" || 'proyecto-capas-production.up.railway.app' ;
+let baseUrl ='proyecto-capas-production.up.railway.app' ;
 let productos = [];
 let user = {};
 
