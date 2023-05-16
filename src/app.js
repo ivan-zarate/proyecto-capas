@@ -42,9 +42,9 @@ else {
 
     app.use(
         cors({
-            origin: whiteList,
+            origin: '*',
             methods: ["POST", "PUT", "GET", "DELETE", "OPTIONS", "HEAD"],
-            header: ["Authorization", "X-API-KEY", "Origin", "X-Requested-With", "Content-Type", "Accept", "Access-Control-Allow-Request-Method", 'Access-Control-Allow-Headers', 'Access-Control-Allow-Origin', '*'],
+            header: ["Authorization", "X-API-KEY", "Origin", "X-Requested-With", "Content-Type", "Accept", "Access-Control-Allow-Request-Method", 'Access-Control-Allow-Headers', 'Access-Control-Allow-Origin'],
             credentials: true,
         })
     );
