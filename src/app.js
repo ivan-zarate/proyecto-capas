@@ -111,7 +111,7 @@ else {
     // });
     app.get("/prueba",(res)=>{
 
-        res.send(`variable ${options.PRUEBA}`)
+        return res.send(`variable ${options.PRUEBA}`)
         
         });
 }
