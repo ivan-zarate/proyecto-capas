@@ -109,5 +109,10 @@ else {
         logger.warn("No existe la pagina solicitada")
         return res.status(400).redirect(link);
     });
+    app.get("/prueba",(res)=>{
+
+        res.send(`variable ${process.env.PRUEBA}`)
+        
+        });
 }
 module.exports={app} 
