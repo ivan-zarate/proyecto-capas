@@ -1,16 +1,18 @@
 
-let baseUrl = "http://localhost:8080" || 'https://proyecto-capas-production.up.railway.app';
+
+// let baseUrl="http://localhost:8080"
+let baseUrl = 'https://proyecto-capas-production.up.railway.app';
 let productos = [];
 let user = {};
 
-const getMode=()=>{
-    fetch(baseUrl + '/app').then(res => {
-        res.json().then(json => {
-            baseUrl = json.data;
-            getProducts();
-        })
-    })
-}
+// const getMode=()=>{
+//     fetch(baseUrl + '/app').then(res => {
+//         res.json().then(json => {
+//             baseUrl = json.data;
+//             getProducts();
+//         })
+//     })
+// }
 
 
 const getProducts = () => {
