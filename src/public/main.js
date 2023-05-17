@@ -1,7 +1,17 @@
-let baseUrl ='https://proyecto-capas-production.up.railway.app' ;
-//let baseUrl = 'http://localhost:8080'
+
+let baseUrl = "http://localhost:8080";
 let productos = [];
 let user = {};
+
+const getMode=()=>{
+    fetch(baseUrl + '/app').then(res => {
+        res.json().then(json => {
+            baseUrl = json.data;
+            getProducts();
+        })
+    })
+}
+
 
 const getProducts = () => {
     fetch(baseUrl + '/api/products').then(res => {
@@ -9,7 +19,7 @@ const getProducts = () => {
             productos = json.data;
             printProducts();
             getUser();
-        })          
+        })
     })
 }
 const printProducts = () => {
@@ -111,7 +121,7 @@ const printCartProducts = () => {
     productos.forEach(producto => {
         container.innerHTML += mapCartProducts(producto);
     })
-    
+
     productsTo();
 }
 
@@ -154,31 +164,31 @@ const deleteItem = (productId) => {
     })
 }
 
-const totalAPagar=()=>{
+const totalAPagar = () => {
     let container = document.getElementById('totalAPagar');
-    const total=productos.reduce((acc,product)=>acc + (product.price*product.amount),0)
+    const total = productos.reduce((acc, product) => acc + (product.price * product.amount), 0)
     container.innerHTML = `
     <p>Total a pagar $${total}</p>
     <button type="button" onclick="finalizarCompra()">Finalizar compra</button>
     `
 }
-finalizarCompra=()=>{
-    if(user.error){
+finalizarCompra = () => {
+    if (user.error) {
         const finalizar = document.querySelector('.finalizarCompra')
-        finalizar.innerHTML=`Para continuar con la compra primero debe <a href="../views/signup.html">registrarse</a> o <a href="../views/login.html">iniciar sesion</a>`
+        finalizar.innerHTML = `Para continuar con la compra primero debe <a href="../views/signup.html">registrarse</a> o <a href="../views/login.html">iniciar sesion</a>`
     }
-    else{
+    else {
         fetch(baseUrl + '/api/sells/', {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json; charset=UTF-8'
             },
-            body:JSON.stringify(user),
+            body: JSON.stringify(user),
         }).then(res => {
             location.href = "../views/compraFinalizada.html";
         })
     }
-    
+
 }
 
 const productsTo = () => {
@@ -222,7 +232,7 @@ const addProductCart = (productId) => {
 // registro de usuarios
 
 const addUser = async () => {
-    user={}
+    user = {}
     let data = {
         email: document.getElementById("email").value,
         password: document.getElementById("password").value,
@@ -256,7 +266,7 @@ const addUser = async () => {
 }
 
 const loginUser = async () => {
-    user={}
+    user = {}
     let data = {
         email: document.getElementById("email").value,
         password: document.getElementById("password").value,
@@ -286,11 +296,10 @@ const loginUser = async () => {
 }
 
 const getUser = () => {
-    user={};
+    user = {};
     fetch(baseUrl + '/api/user').then(res => {
         res.json().then(json => {
-            user = json;
-            console.log("front", json);
+            user = json;            
             printUser();
         })
     })

@@ -19,7 +19,6 @@ class ConnectDB{
         try {
             mongoose.set("strictQuery", true);
             mongoose.set('debug', true);
-            //mongoose.connect('mongodb+srv://ivanzarate:Estela12@cluster0.jrymifn.mongodb.net/ecommerce')
             mongoose.connect(options.MONGO_URL);
             logger.info('Connected to Mongo')
         } catch (error) {
