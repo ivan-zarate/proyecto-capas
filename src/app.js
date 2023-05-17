@@ -52,7 +52,7 @@ else {
     //Creacion de sesiones en mongoStore
     app.use(session({
         store: MongoStore.create({
-            mongoUrl: config.MONGO_URL,
+            mongoUrl: config.MONGO_SESSION,
             ttl: 600
         }),
         secret: config.CLAVE_SECRETA,
