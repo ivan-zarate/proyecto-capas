@@ -111,7 +111,7 @@ else {
     // });
     app.get("/prueba",(res)=>{
         console.log(options.PRUEBA);
-        return res.send(`variable ${options.PRUEBA}`)
+        res.send(`pasa algo?`)
         
         });
 }
