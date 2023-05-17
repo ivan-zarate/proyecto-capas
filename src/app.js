@@ -109,9 +109,9 @@ else {
     //     logger.warn("No existe la pagina solicitada")
     //     return res.status(400).redirect(link);
     // });
-    app.get("/prueba",(res)=>{
+    app.get("/prueba",async (req,res)=>{
         console.log(options.PRUEBA);
-        res.json({data:"pasa algo?"})
+        res.send(`variable ${options.PRUEBA}`)
         
         });
 }
