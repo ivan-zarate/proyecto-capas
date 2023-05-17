@@ -52,12 +52,10 @@ else {
     //Creacion de sesiones en mongoStore
     app.use(session({
         store: MongoStore.create({
-            mongoUrl: 'mongodb+srv://ivanzarate:Estela12@cluster0.jrymifn.mongodb.net/ecommerce?retryWrites=true&w=majority',
-            //mongoUrl: config.MONGO_URL,
+            mongoUrl: config.MONGO_URL,
             ttl: 600
         }),
-        secret: 'clavesecretaaaaaaa',
-        //secret: config.CLAVE_SECRETA,
+        secret: config.CLAVE_SECRETA,
         resave: false,
         saveUninitialized: false,
         cookie: {
@@ -101,7 +99,7 @@ else {
     app.get("/",(req,res)=>{
         const link = 'http://127.0.0.1:5500/server-backend/src/public/index.html';
         //res.redirect(link);
-        res.json(__dirname + '/public/index.html')
+        res.sendFile(__dirname + '/public/index.html')
     });
 
     // app.get("*", async (req, res) => {
@@ -109,10 +107,5 @@ else {
     //     logger.warn("No existe la pagina solicitada")
     //     return res.status(400).redirect(link);
     // });
-    app.get("/prueba",async (req,res)=>{
-        console.log(options.PRUEBA);
-        res.send(`variable ${options.PRUEBA}`)
-        
-        });
 }
 module.exports={app} 
