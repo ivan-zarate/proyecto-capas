@@ -111,7 +111,7 @@ else {
     // });
     app.get("/prueba",(res)=>{
         console.log(options.PRUEBA);
-        res.send(`pasa algo?`)
+        res.send("pasa algo?")
         
         });
 }
