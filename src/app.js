@@ -38,6 +38,7 @@ else {
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(express.static(path.join(__dirname, '/public')));
+    app.use(express.static(path.join(__dirname, '/views')));
 
     //Configuracion CORS para visualizar html correctamente
     const whiteList = ['http://localhost:8080', 'http://localhost:8080/api/login', 'http://127.0.0.1:5500', 'https://proyecto-capas-production.up.railway.app/api/products', '*']
@@ -97,12 +98,13 @@ else {
     });
 
     srv.on('error', error => logger.warn(`Error en el servidor ${error}`))
-
+    
     app.get("/",(req,res)=>{
         res.sendFile(__dirname + '/public/index.html')
     });
-    
 
+
+    
     // app.get("*", async (req, res) => {
     //     logger.warn("No existe la pagina solicitada")
     //     res.sendFile(__dirname + '/public/index.html')
