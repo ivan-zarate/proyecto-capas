@@ -1,19 +1,9 @@
 
 
-// let baseUrl="http://localhost:8080"
-let baseUrl = 'https://proyecto-capas-production.up.railway.app';
+let baseUrl="http://localhost:8080" || 'proyecto-capas-production.up.railway.app';
+//let baseUrl="http://localhost:8080" ;
 let productos = [];
-let user = {};
-
-// const getMode=()=>{
-//     fetch(baseUrl + '/app').then(res => {
-//         res.json().then(json => {
-//             baseUrl = json.data;
-//             getProducts();
-//         })
-//     })
-// }
-
+let user = {};  
 
 const getProducts = () => {
     fetch(baseUrl + '/api/products').then(res => {
@@ -133,12 +123,12 @@ const mapCartProducts = (product) => {
         <h6>${product.name}</h6>
         <p>$${product.price}</p>
         <section class="amount">
-            <a onclick="editAmount('${product._id}','del')"><img style="height:2.5em" src="../public/images/nuevoMenos.png" alt="signo menos"></a>
+            <a onclick="editAmount('${product._id}','del')"><img style="height:2.5em" src="images/nuevoMenos.png" alt="signo menos"></a>
             <p>${product.amount}</p>
-            <a onclick="editAmount('${product._id}','add')"><img style="height:2.5em" src="../public/images/nuevoMas.png" alt="signo mas"></a>
+            <a onclick="editAmount('${product._id}','add')"><img style="height:2.5em" src="images/nuevoMas.png" alt="signo mas"></a>
         </section>
         <img class="productInCart" src="${product.url}" alt="${product.name}">
-        <a onclick="deleteItem('${product._id}')"><img style="height:4em" src="../public/images/basura.png" alt="tacho de basura"></a>
+        <a onclick="deleteItem('${product._id}')"><img style="height:4em" src="images/basura.png" alt="tacho de basura"></a>
     </div>`
 
 
@@ -177,7 +167,7 @@ const totalAPagar = () => {
 finalizarCompra = () => {
     if (user.error) {
         const finalizar = document.querySelector('.finalizarCompra')
-        finalizar.innerHTML = `Para continuar con la compra primero debe <a href="../views/signup.html">registrarse</a> o <a href="../views/login.html">iniciar sesion</a>`
+        finalizar.innerHTML = `Para continuar con la compra primero debe <a href="signup.html">registrarse</a> o <a href="login.html">iniciar sesion</a>`
     }
     else {
         fetch(baseUrl + '/api/sells/', {
@@ -187,7 +177,7 @@ finalizarCompra = () => {
             },
             body: JSON.stringify(user),
         }).then(res => {
-            location.href = "../views/compraFinalizada.html";
+            location.href = "compraFinalizada.html";
         })
     }
 
@@ -260,7 +250,7 @@ const addUser = async () => {
                         error.innerHTML = `${json.message}`;
                     }
                     if (json.user) {
-                        location.href = "../public/index.html"
+                        location.href = "index.html"
                     }
                 })
             }
@@ -290,7 +280,7 @@ const loginUser = async () => {
                         error.innerHTML = `${json[0].error}`;
                     }
                     else {
-                        location.href = "../public/index.html"
+                        location.href = "index.html"
                     }
                 })
             }
