@@ -103,10 +103,10 @@ else {
     });
     
 
-    app.get("*", async (req, res) => {
-        logger.warn("No existe la pagina solicitada")
-        res.sendFile(__dirname + '/public/index.html')
-    });
+    // app.get("*", async (req, res) => {
+    //     logger.warn("No existe la pagina solicitada")
+    //     res.sendFile(__dirname + '/public/index.html')
+    // });
     
     // app.get("/app",(req,res)=>{
     //     let baseUrl="";
